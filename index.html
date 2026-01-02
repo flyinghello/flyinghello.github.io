@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Ethos</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* 可选：简单样式优化，让排版更美观 */
+        .skill-list {
+            font-family: "Microsoft Yahei", Arial, sans-serif;
+            font-size: 18px;
+            line-height: 1.8;
+            /* 行高，提升可读性 */
+            color: #333;
+            /* 字体颜色 */
+            margin: 20px;
+            padding-left: 0px;
+            /* 列表缩进 */
+        }
+
+        .skill-list li {
+            margin: 5px 0;
+            /* 列表项间距 */
+        }
+
+        .certification-list {
+            font-family: "Microsoft Yahei", Arial, sans-serif;
+            font-size: 26px;
+            line-height: 1.8;
+            /* 行高，提升可读性 */
+            color: #FFF;
+            /* 字体颜色 */
+            margin: 20px;
+            padding-left: 0px;
+            /* 列表缩进 */
+        }
+
+        .certification-list li {
+            margin: 2px 0;
+            /* 列表项间距 */
+        }
+
+        /* 减小获奖经历标题与列表之间的间距 */
+        .s-services .section-intro {
+            margin-bottom: 2rem;
+            /* 默认是12rem */
+        }
+
+        /* 让图片并列显示 */
+        .leftcol-images {
+            display: flex;
+            gap: 20px;
+            /* 图片之间的间距 */
+            justify-content: space-between;
+        }
+
+        .leftcol-images .image-wrapper {
+            flex: 1;
+            /* 让两个图片平分容器宽度 */
+            max-width: calc(50% - 10px);
+            /* 减去部分宽度以考虑间距 */
+            padding-top: 60%;
+            /* 缩小图片，从75%改为60%，保持宽高比 */
+        }
+
+        /* Slick滑块箭头样式 */
+        .testimonial-slider .slick-prev,
+        .testimonial-slider .slick-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.7) !important;
+            color: white;
+            border: none;
+            font-size: 16px;
+            line-height: 40px;
+            text-align: center;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .testimonial-slider .slick-prev {
+            left: -60px;
+        }
+
+        .testimonial-slider .slick-next {
+            right: -60px;
+        }
+
+        .testimonial-slider .slick-prev:hover,
+        .testimonial-slider .slick-next:hover {
+            background: rgba(0, 0, 0, 0.9) !important;
+        }
+
+        .testimonial-slider .slick-prev::before,
+        .testimonial-slider .slick-next::before {
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .testimonial-slider .slick-prev::before {
+            content: '\f053';
+            /* Font Awesome 左箭头 */
+        }
+
+        .testimonial-slider .slick-next::before {
+            content: '\f054';
+            /* Font Awesome 右箭头 */
+        }
+    </style>
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/vendor.css">
+
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+</head>
+
+<body id="top">
+
+
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+
+        <!-- <div class="header-logo">
+            <a href="index.html">
+                <img src="images/logo.svg" alt="Homepage">
+            </a>
+        </div> -->
+
+        <div class="header-content">
+
+            <nav class="row header-nav-wrap">
+                <ul class="header-nav">
+                    <li><a class="smoothscroll" href="#hero" title="Intro">主页 Home</a></li>
+                    <li><a class="smoothscroll" href="#about" title="About">个人简介 About</a></li>
+                    <li><a class="smoothscroll" href="#services" title="Services">奖项 Certificaiton</a></li>
+                    <li><a class="smoothscroll" href="#portfolio" title="Works">项目经历 Experience</a></li>
+                    <!-- <li><a class="smoothscroll" href="#contact" title="Contact us">Contact</a></li> -->
+                </ul>
+            </nav> <!-- end header-nav-wrap -->
+
+
+        </div> <!-- end header-content -->
+
+
+
+    </header>
+
+
+    <!-- hero
+    ================================================== -->
+    <section id="hero" class="s-hero target-section" data-parallax="scroll" data-image-src="images/background4.png"
+        data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+
+        <div class="row hero-content">
+
+            <div class="column large-full">
+
+                <h1>
+                    我叫许镁胜 <br>
+                    一名AI应用工程师<br>
+                    I'm MeiSheng Xu,<br>
+                    an engineer of AI application
+                </h1>
+
+
+                <ul class="hero-social">
+                    <li>
+                        <br>
+                    </li>
+                    <li>
+                        <br>
+                    </li>
+                    <!-- <li>
+                        <a href="" title="">github</a>
+                    </li> -->
+                </ul> <!-- end hero-social -->
+
+            </div>
+
+        </div> <!-- end hero-content -->
+
+        <div class="hero-scroll">
+            <a href="#about" class="scroll-link smoothscroll">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M12 24l-8-9h6v-15h4v15h6z" />
+                </svg>
+            </a>
+        </div> <!-- end hero-scroll -->
+
+    </section> <!-- end s-hero -->
+
+
+    <!-- about
+    ================================================== -->
+    <section id="about" class="s-about target-section">
+
+        <div class="s-about__section s-about__section--profile">
+
+            <div class="right-vert-line"></div>
+
+            <div class="row">
+                <div class="column large-6 medium-8 tab-full">
+
+                    <div class="section-intro" data-num="01" data-aos="fade-up">
+                        <h3 class="subhead">About Me</h3>
+                        <h3 class="display-1">
+                            本人性格开朗，乐于探索新事物<br>
+                            <span style="font-size: 3rem;">I am an outgoing person with a passion for exploring new
+                                things.</span>
+                        </h3>
+                        <h3 data-aos="fade-up">个人简介 Profile</h3>
+
+                        <p data-aos="fade-up-myself">
+                            学习绩点3.88，班级前3%,精通<b>python数据分析与可视化</b>，熟悉<b>Linux、docker</b>开发环境，能熟练掌握<b>Sklearn、Pytorch、Numpy、Pandas、OpenCV</b>开发框架，能够熟练应用<b>Transformer、Unet、RNN、CNN</b>等模型及其改进模型。熟悉<b>Python、SQL、C/C++</b>开发语言，具有<b>51单片机、OpenMV</b>开发经验以及<b>github、gitee</b>团队合作能力。
+                        </p>
+
+                    </div>
+
+                    <div class="profile-pic" data-aos="fade-up">
+                        <img src="images/face_full_photo2.jpg" alt="头像照片">
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div> <!-- end s-about__section--profile -->
+        <div class="row add-bottom">
+
+            <div class="column large-full">
+
+                <h1 class="display-1">专业介绍 Major introduction</h1>
+
+                <p class="lead">本人本科专业为智能医学工程，专注于研究人工智能如何赋能医学领域，通过AI技术解决传统医疗无法解决的问题，提升医疗服务质量与效率。<br>
+                    <b>主修课程有：</b>深度学习、计算机操作系统、统计学、数据分析与可视化、数据结构、机器学习、数据库原理、医学图像处理、临床医学概论等。
+                </p>
+                <p class="lead">My undergraduate major is Intelligent Medical Engineering. I focus on researching how
+                    artificial intelligence empowers the medical field, addressing challenges that traditional
+                    healthcare cannot tackle through AI technologies, and improving the quality and efficiency of
+                    medical services.<br>
+                    <b>Core Courses Included:</b> Deep Learning, Computer Operating Systems, Statistics, Data Analysis
+                    and Visualization, Data Structures, Machine Learning, Database Principles, Medical Image Processing,
+                    Introduction to Clinical Medicine, etc.
+                </p>
+
+            </div>
+        </div>
+
+    </section> <!-- end s-about -->
+
+
+    <!-- services
+    ================================================== -->
+    <section id="services" class="s-services target-section h-dark-bg">
+
+        <div class="row s-services__content">
+
+            <div class="vert-line"></div>
+
+            <div class="column large-6 s-services__leftcol">
+                <div class="section-intro" data-num="02" data-aos="fade-up">
+                    <h3 class="subhead">获奖经历 Expertise</h3>
+                    <h2 class="display-1">
+                        多次获得学校奖学金与科技竞赛奖项
+                    </h2>
+                </div>
+
+                <p>
+                <ul class="certification-list">
+                    <li>广药大之星(学校设立最高级奖项)</li>
+                    <li>扬子江卓越奖学金</li>
+                    <li>森工科技创新创业奖学金</li>
+                    <li>蒲公英科技创新一等奖学金</li>
+                    <li>青风藤文学艺术一等奖学金</li>
+                    <li>红棉奖学业优秀二等奖学金</li>
+                    <li>远志社会实践二等奖学金</li>
+                </ul>
+                </p>
+                <div class="leftcol-images" data-aos="fade-up">
+                    <div class="image-wrapper">
+                        <img src="images/SoftwareCopyright.png" alt="奖学金证书1" loading="lazy">
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="images/SoftwareCopyright2.png" alt="奖学金证书2" loading="lazy">
+                    </div>
+                </div>
+            </div> <!-- end  s-services--leftcol -->
+
+            <div class="column large-6">
+                <ul class="services-list" data-aos="fade-up">
+                    <li class="services-list__item is-active">
+                        <div class="services-list__item-header">
+                            <h5>亚太地区数学建模竞赛国际一等奖</h5>
+                        </div>
+                        <div class="services-list__item-body">
+                            <img src="images/Asia-Pacific.png" alt="Asia-Pacific">
+                        </div>
+                    </li> <!-- services-list__item -->
+                    <li class="services-list__item">
+                        <div class="services-list__item-header">
+                            <h5>华数杯数学建模国际M奖（一等奖）</h5>
+                        </div>
+                        <div class="services-list__item-body">
+                            <img src="images/HuaShuCup.png" alt="HuaShuCup">
+                        </div>
+                    </li> <!-- services-list__item -->
+                    <li class="services-list__item">
+                        <div class="services-list__item-header">
+                            <h5>生医工创新实践竞赛全国三等奖</h5>
+                        </div>
+                        <div class="services-list__item-body">
+                            <img src="images/BiomedicalEngineeringInnovation.png" alt="BiomedicalEngineeringInnovation">
+                        </div>
+                    </li> <!-- services-list__item -->
+                    <li class="services-list__item">
+                        <div class="services-list__item-header">
+                            <h5>BETT杯英语写作竞赛二等奖</h5>
+                        </div>
+                        <div class="services-list__item-body">
+                            <img src="images/BETTCup.png" alt="BETTCup">
+                        </div>
+                    </li> <!-- services-list__item -->
+                    <li class="services-list__item">
+                        <div class="services-list__item-header">
+                            <h5>嵌入式设计竞赛南部赛区二等奖</h5>
+                        </div>
+                        <div class="services-list__item-body">
+                            <img src="images/Embedded-Southern-Division.png" alt="Embedded-Southern-Division">
+                        </div>
+                    </li> <!-- services-list__item -->
+                    <li class="services-list__item">
+                        <div class="services-list__item-header">
+                            <h5>高教杯全国数学建模广东二等奖</h5>
+                        </div>
+                        <div class="services-list__item-body">
+                            <img src="images/GaoJiaoCup.png" alt="GaoJiaoCup">
+                        </div>
+                    </li> <!-- services-list__item -->
+                </ul> <!-- end services-list -->
+            </div>
+
+        </div> <!-- s-services__content -->
+
+    </section> <!-- end s-services -->
+
+
+    <!-- portfolio
+    ================================================== -->
+    <section id="portfolio" class="s-portfolio target-section">
+
+        <div class="row s-portfolio__header">
+            <div class="column large-full">
+                <div class="section-intro" data-num="03" data-aos="fade-up">
+                    <h1 class="subhead">获奖经历</h1>
+                    <h1 class="display-1">
+                        从竞赛中实践，从实践中创新
+                    </h1>
+                </div>
+            </div>
+        </div> <!-- s-porfolio__header -->
+
+        <div class="s-about__section">
+            <div class="row">
+                <div class="column">
+                    <h2>项目经历</h2>
+                </div>
+            </div>
+
+
+            <div class="row block-large-1-2 block-900-full work-positions">
+
+                <div class="column" data-aos="fade-up">
+                    <div class="position">
+                        <div class="position__header">
+                            <h6>
+                                <span class="position__co">基于Drizzle改进Resnet18的阿尔兹海默病MRI影像识别</span>
+                                <span class="position__pos">项目负责人</span>
+                            </h6>
+                            <div class="position__timeframe">
+                                2025.06 - 至今
+                            </div>
+                        </div>
+
+                        <p>
+                        <ul class="skill-list">
+                            <li><strong>核心目标：</strong>设计Drizzle框架缓解阿尔兹海默病前MRI病灶特征模糊、模型分类精度低，以及 ResNet18 训练样本需求大、收敛慢的问题
+                            </li>
+                            <li><strong>核心职责：</strong>通过医学先验知识空间约束+软门控机制+Axial
+                                Attention自主设计Drizzle框架，解决模型对于训练样本数据量的严重依赖，优化多损失通路参数，最后通过Grad-CAM可视化提升模型可解释性。</li>
+                            <li>
+                                <strong>代码链接：</strong>
+                                <!-- 核心：用<a>标签 + href属性，补充target="_blank"新窗口打开（可选但友好） -->
+                                <a href="https://gitee.com/xms_666/Drizzle.git" target="_blank">
+                                    https://gitee.com/xms_666/Drizzle.git
+                                </a>
+                            </li>
+                            <li>
+                                <img src="images/Drizzle.png" alt="Drizzle">
+                            </li>
+                        </ul>
+                        </p>
+                    </div>
+                </div> <!-- end column -->
+                <div class="column" data-aos="fade-up">
+                    <div class="position">
+                        <div class="position__header">
+                            <h6>
+                                <span class="position__co">可穿戴式慢性伤口视觉评价与辅疗系统</span>
+                                <br>
+                                <span class="position__pos">项目负责人</span>
+                            </h6>
+                            <div class="position__timeframe">
+                                2023.07-2024.03
+                            </div>
+                        </div>
+
+                        <p>
+                        <ul class="skill-list">
+                            <li><strong>核心目标：</strong>解决慢性伤口就诊成本高问题，设计"图像采集-智能云端分析-远程医疗服务"一体化系统，辅助医生高效制定慢性伤口治疗方案。</li>
+                            <li><strong>核心职责：</strong>设计微电场模拟伤口内源性电场，辅助慢性伤口愈合；规划"微信小程序-腾讯云服务器-医院电脑端"居家远程医疗系统。通过利用YOLOv8识别参照物图案，将伤口颜色亮度从绝对评估转为相对评估，降低图像分割过程中受不同光线而影响最终评估结果，增强模型鲁棒性。
+                            </li>
+                            <li>
+                                <strong>代码链接：</strong>
+                                <!-- 核心：用<a>标签 + href属性，补充target="_blank"新窗口打开（可选但友好） -->
+                                <a href="https://github.com/flyinghello/Intelligent-Chronic-Wound-Treatment-System"
+                                    target="_blank">
+                                    https://github.com/flyinghello/Intelligent-Chronic-Wound-Treatment-System
+                                </a>
+                            </li>
+                            <li>
+                                <img src="images/BiomedicalInnovationalInstrument.png" alt="Drizzle">
+                            </li>
+                        </ul>
+                        </p>
+                    </div>
+                </div> <!-- end column -->
+                <div class="column" data-aos="fade-up">
+                    <div class="position">
+                        <div class="position__header">
+                            <h6>
+                                <span class="position__co">基于RAG的大语言模型医疗智能检索与导诊系统</span>
+                                <span class="position__pos">项目负责人</span>
+                            </h6>
+                            <div class="position__timeframe">
+                                2025.03-2025.07
+                            </div>
+                        </div>
+
+                        <p>
+                        <ul class="skill-list">
+                            <li><strong>核心目标：</strong>解决大语言模型幻觉和医疗信息泄露问题，通过本地化大语言模型+RAG技术，构建面向患者和基层医生的智能检索工具。</li>
+                            <li><strong>核心职责：</strong>通过Langchain框架，部署本地化Qwen2.5大语言模型，结合OCR、Embedding、RAG技术构建完整的pipeline，再利用Prompt工程优化模型输出，实现垂直化应用LLM。
+                            </li>
+                            <li>
+                                <strong>代码链接：</strong>
+                                <!-- 核心：用<a>标签 + href属性，补充target="_blank"新窗口打开（可选但友好） -->
+                                <a href="https://github.com/flyinghello/Rag_LLM" target="_blank">
+                                    https://github.com/flyinghello/Rag_LLM
+                                </a>
+                            </li>
+                            <li>
+                                <img src="images/RagInstrument.png" alt="Drizzle">
+                            </li>
+                        </ul>
+                        </p>
+                    </div>
+                </div> <!-- end column -->
+                <div class="column" data-aos="fade-up">
+                    <div class="position">
+                        <div class="position__header">
+                            <h6>
+                                <span class="position__co">健康监测智能眼镜</span>
+                                <span class="position__pos">算法工程师</span>
+                            </h6>
+                            <div class="position__timeframe">
+                                2023.10 - 2024.09
+                            </div>
+                        </div>
+
+                        <p>
+                        <ul class="skill-list">
+                            <li><strong>核心目标：</strong>针对职场颈椎和用眼问题早期预警缺失痛点，设计实时监测与风险评估眼镜，提醒用户调整坐姿及时休息，改正不良习惯。</li>
+                            <li><strong>核心职责：</strong>量化颈部肌群在动态姿态中的负荷-时间累积效应，构建肌群疲劳评估模型，通过用户反馈实现自适应调整。并将模型转为C语言静态头文件，部署在RTOS嵌入式系统（RT-Thread）。
+                            </li>
+                            <li>
+                                <strong>代码链接：</strong>负责人暂不开源
+                                <!-- 核心：用<a>标签 + href属性，补充target="_blank"新窗口打开（可选但友好） -->
+
+                            </li>
+                            <li>
+                                <img src="images/IntelligentGlasses.png" alt="Drizzle"
+                                    style="width: 80%; height: 100%;">
+                            </li>
+                        </ul>
+                        </p>
+                    </div>
+                </div> <!-- end column -->
+
+            </div> <!-- work positions -->
+
+        </div> <!-- end s-about__section -->
+
+        <div class="row">
+            <div class="column large-full">
+                <h2 style="margin-top: 4rem; margin-bottom: 3rem;">数学建模报告</h2>
+            </div>
+        </div>
+
+        <div class="row s-porfolio__list block-large-1-2 block-tab-full collapse">
+
+            <div class="column" data-aos="fade-up">
+                <div class="folio-item">
+                    <div class="folio-item__thumb">
+                        <a class="folio-item__thumb-link" href="images/portfolio/gallery/g-windows-in-the-city.jpg"
+                            title="Windows in The City" data-size="1050x700">
+                            <img src="images/APMC.png" srcset="images/APMC.png" alt="">
+                        </a>
+                    </div>
+                    <div class="folio-item__info">
+                        <div class="folio-item__cat">题目：</div>
+                        <h4 class="folio-item__title">基于机器学习与多数据融合小样本的中国汽车国际竞争优势研究</h4>
+                    </div>
+                    <a href="https://gitee.com/xms_666/research-on-the-international-competitive-advantages-of-chinese-automobiles-based-on-machine-learning-and-multi-data-fusion-with-few-samples.git" title="下载报告" class="folio-item__project-link">Project
+                        Link</a>
+<!--                    <div class="folio-item__caption">-->
+<!--                        <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem-->
+<!--                            corrupti neque nisi.</p>-->
+<!--                    </div>-->
+                </div>
+            </div> <!-- end column -->
+            <div class="column" data-aos="fade-up">
+                <div class="folio-item">
+                    <div class="folio-item__thumb">
+                        <a class="folio-item__thumb-link" href="images/portfolio/gallery/g-building-blocks.jpg"
+                            title="Building Blocks" data-size="1050x700">
+                            <img src="images/RefrigerantOptimization.png" srcset="images/RefrigerantOptimization.png"
+                                alt="">
+                        </a>
+                    </div>
+                    <div class="folio-item__info">
+                        <div class="folio-item__cat">题目：</div>
+                        <h4 class="folio-item__title">基于决策树的空调制冷剂灌注量预测与优化方案</h4>
+                    </div>
+                    <a href="https://gitee.com/xms_666/refrigerant-optimization.git" title="下载报告" class="folio-item__project-link">Project
+                        Link</a>
+<!--                    <div class="folio-item__caption">-->
+<!--                        <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem-->
+<!--                            corrupti neque nisi.</p>-->
+<!--                    </div>-->
+                </div>
+            </div> <!-- end column -->
+            <div class="column" data-aos="fade-up">
+                <div class="folio-item">
+                    <div class="folio-item__thumb">
+                        <a class="folio-item__thumb-link" href="images/portfolio/gallery/g-shout-jump.jpg"
+                            Title="Shout and Jump" data-size="1050x700">
+                            <img src="images/OptimalInvestmentStrategy.png"
+                                srcset="images/OptimalInvestmentStrategy.png" alt="">
+                        </a>
+                    </div>
+                    <div class="folio-item__info">
+                        <div class="folio-item__cat">题目：</div>
+                        <h4 class="folio-item__title">基于多模型融合的种植方案规划</h4>
+                    </div>
+                    <a href="https://gitee.com/xms_666/Cultivation-Plan-Formulation-Based-on-Multi-model-Fusion.git" title="下载报告" class="folio-item__project-link">Project
+                        Link</a>
+                </div>
+            </div> <!-- end column -->
+            <div class="column" data-aos="fade-up">
+                <div class="folio-item">
+                    <div class="folio-item__thumb">
+                        <a class="folio-item__thumb-link" href="images/portfolio/gallery/g-sand-dunes.jpg"
+                            title="Sand Dunes" data-size="1050x700">
+                            <img src="images/OptimalPlantingStrategy.png" srcset="images/OptimalPlantingStrategy.png"
+                                alt="">
+                        </a>
+                    </div>
+                    <div class="folio-item__info">
+                        <div class="folio-item__cat">题目：</div>
+                        <h4 class="folio-item__title">基于投入产出模型的最佳投资策略</h4>
+                    </div>
+                    <a href="https://gitee.com/xms_666/optimal-industry-investment-strategy-basedonthe-input-output-method.pdf.git" title="下载链接" class="folio-item__project-link">Project
+                        Link</a>
+                </div>
+            </div> <!-- end column -->
+            <div class="column" data-aos="fade-up">
+                <!--                <div class="folio-item">-->
+                <!--                    <div class="folio-item__thumb">-->
+                <!--                        <a class="folio-item__thumb-link" href="images/portfolio/gallery/g-woodcraft.jpg" title="Sand Dunes" data-size="1050x700">-->
+                <!--                            <img src="images/OptimalInvestmentStrategy.png"-->
+                <!--                                 srcset="images/OptimalInvestmentStrategy.png" alt="">-->
+                <!--                        </a>-->
+                <!--                    </div>-->
+                <!--&lt;!&ndash;                    <div class="folio-item__info">&ndash;&gt;-->
+                <!--&lt;!&ndash;                        <div class="folio-item__cat">Product Design</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;                        <h4 class="folio-item__title">Wooocraft</h4>&ndash;&gt;-->
+                <!--&lt;!&ndash;                    </div>&ndash;&gt;-->
+                <!--                    <a href="https://www.behance.net/" title="Project Link" class="folio-item__project-link">Project Link</a>-->
+                <!--                    <div class="folio-item__caption">-->
+                <!--                        <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>-->
+                <!--                    </div>-->
+                <!--                </div>-->
+            </div> <!-- end column -->
+            <div class="column" data-aos="fade-up">
+                <!--                <div class="folio-item">-->
+                <!--                    <div class="folio-item__thumb">-->
+                <!--                        <a class="folio-item__thumb-link" href="images/portfolio/gallery/g-lamp.jpg" title="The Lamp" data-size="1050x700">-->
+                <!--                            <img src="images/portfolio/lamp.jpg" -->
+                <!--                                 srcset="images/portfolio/lamp.jpg 1x, images/portfolio/lamp@2x.jpg 2x" alt="">-->
+                <!--                        </a>-->
+                <!--                    </div>-->
+                <!--                    <div class="folio-item__info">-->
+                <!--                        <div class="folio-item__cat">Product Design</div>-->
+                <!--                        <h4 class="folio-item__title">The Lamp</h4>-->
+                <!--                    </div>-->
+                <!--                    <a href="https://www.behance.net/" title="Project Link" class="folio-item__project-link">Project Link</a>-->
+                <!--                    <div class="folio-item__caption">-->
+                <!--                        <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>-->
+                <!--                    </div>-->
+                <!--                </div>-->
+            </div> <!-- end column -->
+
+        </div> <!-- folio-list -->
+
+    </section> <!-- end portfolio -->
+
+
+    <!-- testimonials
+    ================================================== -->
+    <section id="testimonials" class="s-testimonials">
+
+        <div class="row">
+            <div class="column large-full">
+                <h2
+                    style="margin-top: 4rem; margin-bottom: 3rem; color: #000000; background-color: #ffffff; padding: 1rem 0;">
+                    竞赛获奖照片</h2>
+            </div>
+        </div>
+
+        <div class="row collapse">
+
+            <div class="column large-full">
+
+                <div class="testimonial-slider" data-aos="fade-up">
+
+                    <div class="testimonial-slider__slide">
+                        <div class="image-wrapper">
+                            <img src="images/Award.jpg" alt="Testimonial image" loading="lazy">
+                        </div>
+                        <div class="testimonial-slider__author">
+                            <!--                            <img src="images/avatars/user-02.jpg" alt="Author image" class="testimonial-slider__avatar">-->
+                            <cite class="testimonial-slider__cite">
+                                <!--                                <strong>森工科技创新创业奖学金颁奖照片</strong>-->
+                                <span>森工科技创新创业奖学金颁奖照片</span>
+                            </cite>
+                        </div>
+                    </div> <!-- end testimonials__slide -->
+
+
+
+                    <div class="testimonial-slider__slide">
+                        <div class="image-wrapper">
+                            <img src="images/BiomedicalContest.jpg" alt="Testimonial image" loading="lazy">
+                        </div>
+                        <div class="testimonial-slider__author">
+                            <!--                            <img src="images/avatars/user-04.jpg" alt="Author image" class="testimonial-slider__avatar">-->
+                            <cite class="testimonial-slider__cite">
+                                <!--                                <strong></strong>-->
+                                <span>生物医学工程创新实践竞赛比赛照片</span>
+                            </cite>
+                        </div>
+                    </div> <!-- end testimonials__slide -->
+
+                    <div class="testimonial-slider__slide">
+                        <div class="image-wrapper">
+                            <img src="images/Defend.jpg" alt="Testimonial image" loading="lazy">
+                        </div>
+                        <div class="testimonial-slider__author">
+                            <!--                            <img src="images/avatars/user-05.jpg" alt="Author image" class="testimonial-slider__avatar">-->
+                            <cite class="testimonial-slider__cite">
+                                <!--                                <strong>扬子江答辩照片</strong>-->
+                                <span>扬子江答辩照片</span>
+                            </cite>
+                        </div>
+                    </div> <!-- end testimonials__slide -->
+                      <div class="testimonial-slider__slide">
+                        <div class="image-wrapper">
+                            <img src="images/MakerChina.jpg" alt="Testimonial image" loading="lazy">
+                        </div>
+                        <div class="testimonial-slider__author">
+                            <!--                            <img src="images/avatars/user-04.jpg" alt="Author image" class="testimonial-slider__avatar">-->
+                            <cite class="testimonial-slider__cite">
+                                <!--                                <strong></strong>-->
+                                <span>与创客中国老师交流学习</span>
+                            </cite>
+                        </div>
+                    </div> <!-- end testimonials__slide -->
+                </div> <!-- end testimonial slider -->
+
+            </div> <!-- end column -->
+
+        </div> <!-- end row -->
+
+
+    </section> <!-- end s-testimonials -->
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
